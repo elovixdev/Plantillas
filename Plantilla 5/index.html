@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aura — Espacio de Bienestar Holístico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav-logo"><span class="nav-dot"></span>Aura</a>
+  <nav class="nav-links">
+    <a href="#presencia" data-nav="presencia">Presencia</a>
+    <a href="#practicas" data-nav="practicas">Prácticas</a>
+    <a href="#camino" data-nav="camino">Camino</a>
+    <a href="#voces" data-nav="voces">Voces</a>
+    <a href="#contacto" class="nav-cta" data-nav="contacto">Escribime</a>
+  </nav>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="#inicio">Inicio</a>
+  <a href="#presencia">Presencia</a>
+  <a href="#practicas">Prácticas</a>
+  <a href="#camino">Camino</a>
+  <a href="#voces">Voces</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
+<main>
+
+<!-- ── INICIO ── -->
+<section id="inicio" class="hero">
+  <div class="breathe" aria-hidden="true">
+    <span class="ring ring-1"></span>
+    <span class="ring ring-2"></span>
+    <span class="ring ring-3"></span>
+    <span class="ring-core"></span>
+  </div>
+  <div class="hero-content reveal">
+    <p class="eyebrow">Terapias holísticas &amp; acompañamiento energético</p>
+    <h1>Un espacio para respirar,<br/>soltar y volver <em>a vos</em></h1>
+    <p class="hero-text">Sesiones y procesos de sanación pensados para calmar el ruido de afuera y reencontrarte con tu propio equilibrio, a tu ritmo.</p>
+    <div class="hero-actions">
+      <a href="#practicas" class="btn btn-primary">Conocer las prácticas</a>
+      <a href="#contacto" class="btn btn-outline">Escribime</a>
+    </div>
+  </div>
+  <a href="#presencia" class="scroll-cue" aria-label="Desplazarse hacia la siguiente sección"><span></span>Desplazate</a>
+</section>
+
+<!-- ── PRESENCIA ── -->
+<section id="presencia" class="presencia">
+  <div class="section-inner split">
+    <div class="presencia-visual reveal-left">
+      <div class="avatar">
+        <img src="img/foto-perfil.jpg" alt="Foto de perfil" onerror="this.style.display='none'; this.parentElement.classList.add('no-img')"/>
+        <span class="avatar-fallback">A</span>
+      </div>
+      <ul class="credentials">
+        <li><span class="cred-dot"></span>Más de 7 años acompañando procesos</li>
+        <li><span class="cred-dot"></span>Formación en Reiki y sanación energética</li>
+        <li><span class="cred-dot"></span>Enfoque integrativo cuerpo · mente · energía</li>
+      </ul>
+    </div>
+    <div class="presencia-text reveal-right">
+      <p class="eyebrow">Quién te acompaña</p>
+      <h2>Un proceso a tu propio ritmo</h2>
+      <p class="body-text">Soy <em>[Tu nombre]</em>, terapeuta holística. Trabajo con herramientas energéticas y emocionales para acompañar personas que sienten que necesitan hacer una pausa, ordenar algo por dentro o simplemente volver a escucharse.</p>
+      <p class="body-text">No hay un método único: cada encuentro se arma según lo que traés ese día. Mi trabajo es sostener un espacio seguro, sin juicio, donde eso pueda aparecer y transformarse.</p>
+      <a href="#practicas" class="text-link">Ver cómo trabajo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRÁCTICAS ── -->
+<section id="practicas" class="practicas">
+  <div class="section-inner">
+    <p class="eyebrow center">Prácticas</p>
+    <h2 class="center">Elegí el encuentro que tu momento pide</h2>
+    <p class="section-sub center">Tocá cada práctica para ver de qué se trata.</p>
+
+    <div class="accordion reveal">
+
+      <details class="acc-item" open>
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.3"/><circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+          <span class="acc-title">Sesión Energética</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Liberá bloqueos y calmá el sistema nervioso, devolviendo fluidez a tu energía vital. Ideal para momentos de mucho estrés o cansancio sostenido.</p>
+          <div class="acc-meta"><span>60 min</span><span class="acc-price">$00.000</span></div>
+          <a href="#contacto" class="acc-link">Reservar →</a>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 8v6M20 26v6M8 20h6M26 20h6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+          <span class="acc-title">Reiki</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Canalización de energía universal para reducir el estrés y traer calma mental. Una sesión suave, indicada para cualquier momento de tu proceso.</p>
+          <div class="acc-meta"><span>50 min</span><span class="acc-price">$00.000</span></div>
+          <a href="#contacto" class="acc-link">Reservar →</a>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M9 24c6-10 16-10 22-14-2 8-8 16-18 18-2 .4-4.6-1-4-4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="acc-title">Limpieza de Espacios</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Armonización energética de hogares, locales y oficinas. Ayuda a renovar el ambiente cuando sentís que algo quedó estancado en el lugar.</p>
+          <div class="acc-meta"><span>A convenir</span><span class="acc-price">Consultar</span></div>
+          <a href="#contacto" class="acc-link">Consultar →</a>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 8l3.5 8.5L32 20l-8.5 3.5L20 32l-3.5-8.5L8 20l8.5-3.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="acc-title">Lectura Intuitiva</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Guía y claridad sobre tu momento actual y el camino a seguir, a partir de una lectura energética de tu situación presente.</p>
+          <div class="acc-meta"><span>45 min</span><span class="acc-price">$00.000</span></div>
+          <a href="#contacto" class="acc-link">Reservar →</a>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M27 20a7 7 0 11-9-9 9 9 0 109 9z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="acc-title">Meditación Guiada</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Sesiones individuales o grupales para entrenar calma y presencia con técnicas simples de respiración y visualización.</p>
+          <div class="acc-meta"><span>40 min</span><span class="acc-price">$00.000</span></div>
+          <a href="#contacto" class="acc-link">Reservar →</a>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M12 28c8-1 14-7 16-16-8 1-14 7-16 16z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M12 28c2-4 4-7 8-9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+          <span class="acc-title">Acompañamiento Kármico</span>
+          <span class="acc-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="acc-body">
+          <p>Identificá patrones repetidos y soltá cargas que ya no te pertenecen, en un proceso de varios encuentros.</p>
+          <div class="acc-meta"><span>60 min</span><span class="acc-price">$00.000</span></div>
+          <a href="#contacto" class="acc-link">Reservar →</a>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CAMINO ── -->
+<section id="camino" class="camino">
+  <div class="section-inner">
+    <p class="eyebrow center light">Programa online</p>
+    <h2 class="center light">Camino de Reconexión</h2>
+    <p class="section-sub center light">Un recorrido de seis meses para soltar patrones, ordenar tu energía y reconectar con tu propósito.</p>
+
+    <div class="journey reveal">
+      <div class="journey-step">
+        <span class="journey-num">01</span>
+        <h3>Reconocer</h3>
+        <p>Ponemos nombre a los patrones que se repiten en tu historia.</p>
+      </div>
+      <div class="journey-step">
+        <span class="journey-num">02</span>
+        <h3>Soltar</h3>
+        <p>Trabajamos herramientas energéticas para liberar cargas antiguas.</p>
+      </div>
+      <div class="journey-step">
+        <span class="journey-num">03</span>
+        <h3>Ordenar</h3>
+        <p>Integramos recursos de calma y presencia para tu día a día.</p>
+      </div>
+      <div class="journey-step">
+        <span class="journey-num">04</span>
+        <h3>Reconectar</h3>
+        <p>Cerramos con mayor claridad sobre tu propósito y tus próximos pasos.</p>
+      </div>
+    </div>
+
+    <div class="enroll-panel reveal">
+      <div class="enroll-info">
+        <span class="enroll-badge">Inscripciones abiertas</span>
+        <ul class="enroll-meta">
+          <li><span>Inicio</span>A definir</li>
+          <li><span>Duración</span>6 meses · encuentros quincenales</li>
+          <li><span>Modalidad</span>Online, con clases grabadas</li>
+        </ul>
+      </div>
+      <div class="enroll-cta">
+        <span class="enroll-precio">$00.000<small>/mes</small></span>
+        <a href="#contacto" class="btn btn-gold">Quiero sumarme</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VOCES ── -->
+<section id="voces" class="voces">
+  <div class="section-inner center-inner">
+    <p class="eyebrow center">Voces</p>
+    <h2 class="center">Lo que dejaron los encuentros</h2>
+
+    <div class="carousel reveal">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <div class="carousel-track">
+        <p class="carousel-text" id="voiceText">Llegué agotada y salí de la sesión con una calma que hacía mucho no sentía.</p>
+        <span class="carousel-author" id="voiceAuthor">— Nombre Apellido</span>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="voicePrev" aria-label="Testimonio anterior">←</button>
+        <div class="carousel-dots" id="voiceDots"></div>
+        <button class="carousel-arrow" id="voiceNext" aria-label="Testimonio siguiente">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto" class="contacto">
+  <div class="section-inner center-inner">
+    <p class="eyebrow light center">Contacto</p>
+    <h2 class="light">¿Empezamos tu proceso?</h2>
+    <p class="contacto-text">Escribime y coordinamos juntas el mejor momento para tu primera sesión.</p>
+    <a href="https://wa.me/5490000000000" target="_blank" class="btn-whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.855L.057 23.428a.75.75 0 00.921.921l5.573-1.472A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-5.001-1.384l-.36-.214-3.733.985.985-3.733-.214-.36A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      Escribime por WhatsApp
+    </a>
+    <div class="social-links">
+      <a href="#" class="social-link">@tu.usuario</a>
+      <a href="#" class="social-link">Tu Página</a>
+    </div>
+    <p class="footer-note">© 2026 Aura · Espacio de bienestar holístico</p>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

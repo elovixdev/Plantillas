@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aura — Espacio de Bienestar Holístico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── TOPBAR ── -->
+<header class="topbar">
+  <a class="logo" href="#cap-01"><span class="logo-dot"></span>Aura</a>
+  <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ── MENÚ DESPLEGABLE ── -->
+<div class="drop-menu" id="dropMenu">
+  <a href="#cap-01">01 · Inicio</a>
+  <a href="#cap-02">02 · Presencia</a>
+  <a href="#cap-03">03 · Prácticas</a>
+  <a href="#cap-04">04 · Camino</a>
+  <a href="#cap-05">05 · Voces</a>
+  <a href="#cap-06">06 · Cierre</a>
+</div>
+
+<!-- ── PROGRESO (desktop) ── -->
+<nav class="progress" id="progress">
+  <a href="#cap-01" data-target="cap-01"><b>1</b><em>Inicio</em></a>
+  <a href="#cap-02" data-target="cap-02"><b>2</b><em>Presencia</em></a>
+  <a href="#cap-03" data-target="cap-03"><b>3</b><em>Prácticas</em></a>
+  <a href="#cap-04" data-target="cap-04"><b>4</b><em>Camino</em></a>
+  <a href="#cap-05" data-target="cap-05"><b>5</b><em>Voces</em></a>
+  <a href="#cap-06" data-target="cap-06"><b>6</b><em>Cierre</em></a>
+</nav>
+
+<main class="snap-wrap">
+
+<!-- ── CAP 01 · INICIO ── -->
+<section class="cap cap--violet" id="cap-01">
+  <span class="ghost-num">01</span>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cap-inner center-inner reveal">
+    <p class="chapter-label">Capítulo 01 · Inicio</p>
+    <h1>Un espacio<br/>para volver <em>a vos</em></h1>
+    <p class="cap-desc">Terapias y acompañamiento holístico para calmar el ruido de afuera y reencontrarte con tu propio equilibrio.</p>
+    <div class="cap-actions">
+      <a href="#cap-03" class="btn-primary">Ver prácticas</a>
+      <a href="#cap-06" class="btn-ghost">Escribime</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span></span>Desplazate</div>
+</section>
+
+<!-- ── CAP 02 · PRESENCIA ── -->
+<section class="cap cap--sand" id="cap-02">
+  <span class="ghost-num">02</span>
+  <div class="cap-inner split-inner">
+    <div class="reveal-left">
+      <p class="chapter-label">Capítulo 02 · Presencia</p>
+      <h2>Quién te acompaña</h2>
+      <div class="portrait">
+        <img src="img/foto-perfil.jpg" alt="Foto de perfil" onerror="this.style.display='none'; this.parentElement.classList.add('no-img')"/>
+        <div class="portrait-fallback">A</div>
+      </div>
+      <p class="body-text">Soy <em>[Tu nombre]</em>, terapeuta holística. Acompaño procesos de sanación energética y emocional desde hace más de siete años, con un abordaje suave que respeta los tiempos de cada persona.</p>
+    </div>
+    <div class="steps reveal-right">
+      <p class="steps-label">Cómo trabajo</p>
+      <ol>
+        <li><span>01</span><div><h3>Escucha</h3><p>Empezamos por entender qué te trae hasta acá, sin apuro.</p></div></li>
+        <li><span>02</span><div><h3>Encuentro</h3><p>Elegimos juntas la herramienta que mejor responde a tu momento.</p></div></li>
+        <li><span>03</span><div><h3>Integración</h3><p>Cerramos con pautas simples para sostener lo trabajado en tu día a día.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAP 03 · PRÁCTICAS ── -->
+<section class="cap cap--sage" id="cap-03">
+  <span class="ghost-num">03</span>
+  <div class="cap-inner">
+    <p class="chapter-label center">Capítulo 03 · Prácticas</p>
+    <h2 class="center">Servicios</h2>
+    <p class="cap-sub center">Tocá cada tarjeta para conocer más.</p>
+
+    <div class="flip-grid reveal">
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">◐</span><h3>Sesión Energética</h3></div>
+          <div class="flip-back"><p>Liberá bloqueos y calmá el sistema nervioso, devolviendo fluidez a tu energía vital.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">✧</span><h3>Reiki</h3></div>
+          <div class="flip-back"><p>Canalización de energía para reducir el estrés y traer calma mental.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">〜</span><h3>Limpieza de Espacios</h3></div>
+          <div class="flip-back"><p>Armonización energética de hogares, locales y oficinas.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">◇</span><h3>Lectura Intuitiva</h3></div>
+          <div class="flip-back"><p>Guía y claridad sobre tu momento actual y el camino a seguir.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">☾</span><h3>Meditación Guiada</h3></div>
+          <div class="flip-back"><p>Sesiones individuales o grupales para entrenar calma y presencia.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="flip-icon">✦</span><h3>Acompañamiento Kármico</h3></div>
+          <div class="flip-back"><p>Identificá patrones repetidos y soltá cargas que ya no te pertenecen.</p><a href="#cap-06" class="btn-servicio">Reservar →</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CAP 04 · CAMINO ── -->
+<section class="cap cap--violet-deep" id="cap-04">
+  <span class="ghost-num">04</span>
+  <div class="cap-inner split-inner split-inner--reverse">
+    <div class="curso-featured reveal-left">
+      <span class="curso-badge">Inscripciones abiertas</span>
+      <h2>Camino de Reconexión</h2>
+      <p>Un recorrido de 6 meses para soltar patrones, ordenar tu energía y reconectar con tu propósito.</p>
+      <ul class="curso-meta">
+        <li><span>Inicio</span>A definir</li>
+        <li><span>Duración</span>6 meses · quincenal</li>
+        <li><span>Modalidad</span>Online</li>
+      </ul>
+      <div class="curso-cta-row">
+        <span class="curso-precio">$00.000<small>/mes</small></span>
+        <button type="button" class="btn-primary" onclick="openModal('modal-curso')">Más información</button>
+      </div>
+    </div>
+    <div class="curso-list reveal-right">
+      <p class="steps-label light">Próximos cursos</p>
+      <div class="curso-row"><h3>Introducción al Reiki</h3><span>Próximamente</span></div>
+      <div class="curso-row"><h3>Meditación para Principiantes</h3><span>Próximamente</span></div>
+      <div class="curso-row"><h3>Lectura Intuitiva Personal</h3><span>Próximamente</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAP 05 · VOCES ── -->
+<section class="cap cap--bg" id="cap-05">
+  <span class="ghost-num">05</span>
+  <div class="cap-inner center-inner">
+    <p class="chapter-label center">Capítulo 05 · Voces</p>
+    <h2 class="center">Lo que dejaron los encuentros</h2>
+
+    <div class="spotlight reveal">
+      <button class="spot-arrow spot-prev" id="spotPrev" aria-label="Anterior">←</button>
+      <div class="spot-quote">
+        <p id="spotText">“Llegué agotada y salí de la sesión con una calma que hacía mucho no sentía.”</p>
+        <span id="spotAuthor">— Nombre Apellido</span>
+      </div>
+      <button class="spot-arrow spot-next" id="spotNext" aria-label="Siguiente">→</button>
+    </div>
+    <div class="spot-dots" id="spotDots"></div>
+  </div>
+</section>
+
+<!-- ── CAP 06 · CIERRE ── -->
+<section class="cap cap--close" id="cap-06">
+  <span class="ghost-num">06</span>
+  <div class="cap-inner center-inner">
+    <p class="chapter-label light center">Capítulo 06 · Cierre</p>
+    <h2>¿Empezamos?</h2>
+    <p class="cap-desc light">Escribime y coordinamos juntas el mejor momento para tu primera sesión.</p>
+    <a href="https://wa.me/5490000000000" target="_blank" class="btn-whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.855L.057 23.428a.75.75 0 00.921.921l5.573-1.472A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-5.001-1.384l-.36-.214-3.733.985.985-3.733-.214-.36A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      Escribime por WhatsApp
+    </a>
+    <div class="redes">
+      <a href="#" class="red-link" aria-label="Instagram">@tu.usuario</a>
+      <a href="#" class="red-link" aria-label="Facebook">Tu Página</a>
+    </div>
+    <p class="footer-note">© 2026 Aura · Bienestar Holístico</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ── MODAL: Curso destacado ── -->
+<div class="modal-overlay" id="modal-curso">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-curso')" aria-label="Cerrar">×</button>
+    <p class="chapter-label">Capítulo 04 · Curso online</p>
+    <h2>Camino de Reconexión</h2>
+    <p class="body-text">Un recorrido de 6 meses pensado para acompañarte en un proceso profundo de transformación. Todas las clases quedan grabadas, así podés avanzar a tu ritmo si no llegás al encuentro en vivo.</p>
+    <div class="modal-grid">
+      <div><span>Inicio</span>A definir</div>
+      <div><span>Horario</span>A definir</div>
+      <div><span>Duración</span>6 meses (quincenal)</div>
+      <div><span>Modalidad</span>Online por Zoom</div>
+    </div>
+    <h3 class="modal-subtitle">Temario del curso</h3>
+    <ul class="modal-list">
+      <li><strong>Herramientas energéticas:</strong> prácticas para identificar y liberar bloqueos propios.</li>
+      <li><strong>Gestión emocional:</strong> recursos para reconocer y transformar lo que sentís.</li>
+      <li><strong>Meditación y presencia:</strong> técnicas de respiración y calma diaria.</li>
+      <li><strong>Propósito y dirección:</strong> claridad para tus próximos pasos.</li>
+    </ul>
+    <h3 class="modal-subtitle">Inversión</h3>
+    <p class="body-text">$00.000 ARS mensuales · Transferencia o Mercado Pago (datos a confirmar).</p>
+    <a href="#cap-06" class="btn-whatsapp" onclick="closeModal('modal-curso')">Reservar mi lugar</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
