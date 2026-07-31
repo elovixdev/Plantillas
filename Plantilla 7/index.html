@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aura — Espacio de Bienestar Holístico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV (Página 1) ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#"><span class="logo-dot"></span>Aura</a>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO (presentación de la Página 2, con órbitas) ── -->
+<section class="hero" id="hero">
+  <div class="halo halo-1"></div>
+  <div class="halo halo-2"></div>
+  <div class="halo halo-3"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <p class="hero-sub">Terapias holísticas &amp; acompañamiento energético</p>
+      <h1>Un espacio para<br/><em>volver a vos</em></h1>
+      <p class="hero-desc">Sesiones y cursos pensados para calmar el ruido de afuera y reconectar con tu propio equilibrio, a tu ritmo.</p>
+      <div class="hero-actions">
+        <a href="#servicios" class="btn-primary">Ver servicios</a>
+        <a href="#sobre-mi" class="btn-ghost">Conocerme</a>
+      </div>
+    </div>
+
+    <div class="hero-orbit reveal-right" aria-hidden="true">
+      <div class="orbit-ring ring-1">
+        <span class="node" style="--i:0"></span>
+        <span class="node" style="--i:1"></span>
+        <span class="node" style="--i:2"></span>
+      </div>
+      <div class="orbit-ring ring-2">
+        <span class="node" style="--i:0"></span>
+        <span class="node" style="--i:1"></span>
+      </div>
+      <div class="orbit-core"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><span></span></div>
+</section>
+
+<div class="wave-divider"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 C300,90 900,-10 1200,40 L1200,80 L0,80 Z"></path></svg></div>
+
+<!-- ── SOBRE MÍ ── -->
+<section class="sobre-mi section" id="sobre-mi">
+  <div class="container split">
+    <div class="split-img reveal-left">
+      <div class="img-frame">
+        <img src="img/foto-perfil.jpg" alt="Foto de perfil" onerror="this.style.display='none'; this.parentElement.classList.add('no-img')"/>
+        <div class="img-placeholder">A</div>
+      </div>
+      <div class="badge-float">
+        <span class="badge-num">+7</span>
+        <span class="badge-label">años acompañando procesos</span>
+      </div>
+    </div>
+    <div class="split-text reveal-right">
+      <p class="section-label"><span class="label-dot"></span>Sobre mí</p>
+      <h2>Hola, soy <em>[Tu nombre]</em></h2>
+      <p class="body-text">Trabajo con terapias energéticas y herramientas holísticas para acompañar procesos de sanación, equilibrio emocional y reconexión con una misma. Creo en un abordaje suave: sin apuro, sin exigencias, respetando los tiempos de cada persona.</p>
+      <p class="body-text">Cada sesión es un espacio seguro para soltar, escuchar al cuerpo y encontrar claridad en medio del ruido cotidiano.</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Terapias</span></div>
+        <div class="stat"><span class="stat-num">300+</span><span class="stat-label">Personas acompañadas</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Online y presencial</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section class="servicios section" id="servicios">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label center"><span class="label-dot"></span>Lo que ofrezco</p>
+      <h2>Servicios</h2>
+      <p class="section-desc">Sesiones individuales pensadas para distintos momentos y necesidades.</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card reveal">
+        <div class="card-icon">◐</div>
+        <h3>Sesión Energética</h3>
+        <p>Un encuentro para liberar bloqueos, calmar el sistema nervioso y devolver fluidez a tu energía vital.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">✧</div>
+        <h3>Reiki</h3>
+        <p>Canalización de energía para reducir el estrés, acompañar procesos de sanación y traer calma mental.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">〜</div>
+        <h3>Limpieza de Espacios</h3>
+        <p>Armonización energética de hogares, locales y oficinas para renovar el ambiente y su circulación.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">◇</div>
+        <h3>Lectura Intuitiva</h3>
+        <p>Un espacio de guía y claridad sobre tu momento actual, tus vínculos y tu camino a seguir.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">☾</div>
+        <h3>Meditación Guiada</h3>
+        <p>Sesiones individuales o grupales para entrenar la calma, la respiración consciente y la presencia.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">✦</div>
+        <h3>Acompañamiento Kármico</h3>
+        <p>Un proceso profundo para identificar patrones repetidos y soltar cargas que ya no te pertenecen.</p>
+        <a href="#contacto" class="btn-servicio">Quiero una sesión</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CURSOS ── -->
+<section class="cursos section" id="cursos">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label center"><span class="label-dot"></span>Formación online</p>
+      <h2>Cursos</h2>
+      <p class="section-desc">Espacios de aprendizaje para llevar estas herramientas a tu propia vida.</p>
+    </div>
+    <div class="cursos-grid">
+
+      <div class="curso-card curso-card--featured reveal">
+        <div class="curso-badge curso-badge--active">Inscripciones abiertas</div>
+        <h3>Camino de Reconexión</h3>
+        <p class="curso-teaser">Un recorrido de 6 meses para soltar patrones, ordenar tu energía y reconectar con tu propósito.</p>
+        <ul class="curso-meta">
+          <li><span>Inicio</span>A definir</li>
+          <li><span>Horario</span>A definir</li>
+          <li><span>Duración</span>6 meses · clases quincenales</li>
+          <li><span>Modalidad</span>Online por Zoom + clases grabadas</li>
+        </ul>
+        <div class="curso-footer curso-footer--featured">
+          <span class="curso-precio">$00.000<small>/mes</small></span>
+          <div class="curso-btns">
+            <button type="button" class="btn-primary-sm" onclick="openModal('modal-curso')">Más información</button>
+            <a href="#contacto" class="btn-whatsapp-sm">Quiero mi lugar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="curso-card reveal">
+        <div class="curso-badge">Online</div>
+        <h3>Introducción al Reiki</h3>
+        <p>Primeros pasos para canalizar energía y comenzar a usar el Reiki en tu día a día.</p>
+        <div class="curso-footer">
+          <span class="btn-primary-sm btn-disabled">Próximamente</span>
+        </div>
+      </div>
+
+      <div class="curso-card reveal">
+        <div class="curso-badge">Online</div>
+        <h3>Meditación para Principiantes</h3>
+        <p>Un curso breve para incorporar la meditación como hábito, sin presión ni perfeccionismo.</p>
+        <div class="curso-footer">
+          <span class="btn-primary-sm btn-disabled">Próximamente</span>
+        </div>
+      </div>
+
+      <div class="curso-card reveal">
+        <div class="curso-badge">Online</div>
+        <h3>Lectura Intuitiva Personal</h3>
+        <p>Herramientas para desarrollar tu propia intuición y aprender a confiar en ella.</p>
+        <div class="curso-footer">
+          <span class="btn-primary-sm btn-disabled">Próximamente</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIOS ── -->
+<section class="testimonios section" id="testimonios">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label center"><span class="label-dot"></span>Experiencias</p>
+      <h2>Testimonios</h2>
+    </div>
+    <div class="test-grid">
+
+      <div class="test-card reveal">
+        <p class="test-quote">Llegué agotada y salí de la sesión con una calma que hacía mucho no sentía. Un espacio hermoso.</p>
+        <p class="test-autor">— Nombre Apellido</p>
+      </div>
+
+      <div class="test-card reveal">
+        <p class="test-quote">El curso me dio herramientas concretas y mucha contención. Se nota el cuidado en cada clase.</p>
+        <p class="test-autor">— Nombre Apellido</p>
+      </div>
+
+      <div class="test-card reveal">
+        <p class="test-quote">La limpieza energética de mi casa cambió por completo el ambiente. Totalmente recomendable.</p>
+        <p class="test-autor">— Nombre Apellido</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section class="contacto section" id="contacto">
+  <div class="container contacto-inner reveal">
+    <p class="section-label center"><span class="label-dot"></span>Hablemos</p>
+    <h2>Contacto</h2>
+    <p class="contacto-desc">¿Tenés dudas o querés reservar una sesión? Escribime y coordinamos juntas el mejor momento para vos.</p>
+    <a href="https://wa.me/5490000000000" target="_blank" class="btn-whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.855L.057 23.428a.75.75 0 00.921.921l5.573-1.472A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-5.001-1.384l-.36-.214-3.733.985.985-3.733-.214-.36A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      Escribime por WhatsApp
+    </a>
+    <div class="redes">
+      <a href="#" class="red-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="19" height="19"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @tu.usuario
+      </a>
+      <a href="#" class="red-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        Tu Página
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <p>© 2026 Aura · Bienestar Holístico · Todos los derechos reservados</p>
+</footer>
+
+<!-- ── MODAL: Curso destacado ── -->
+<div class="modal-overlay" id="modal-curso">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-curso')" aria-label="Cerrar">×</button>
+
+    <p class="section-label"><span class="label-dot"></span>Curso online</p>
+    <h2>Camino de Reconexión</h2>
+
+    <p class="body-text">Un recorrido de 6 meses pensado para acompañarte en un proceso profundo de transformación. Todas las clases quedan grabadas, así podés avanzar a tu ritmo si no llegás al encuentro en vivo. Además, contás con un grupo exclusivo para recibir materiales y enlaces de cada clase.</p>
+
+    <div class="modal-grid">
+      <div><span>Inicio</span>A definir</div>
+      <div><span>Horario</span>A definir</div>
+      <div><span>Duración</span>6 meses (clases quincenales)</div>
+      <div><span>Modalidad</span>Online por Zoom</div>
+    </div>
+
+    <h3 class="modal-subtitle">Temario del curso</h3>
+    <ul class="modal-list">
+      <li><strong>Herramientas energéticas:</strong> prácticas para identificar y liberar bloqueos propios.</li>
+      <li><strong>Gestión emocional:</strong> recursos para reconocer, sostener y transformar lo que sentís.</li>
+      <li><strong>Meditación y presencia:</strong> técnicas de respiración y calma para el día a día.</li>
+      <li><strong>Propósito y dirección:</strong> claridad para trazar tus próximos pasos con más confianza.</li>
+    </ul>
+
+    <h3 class="modal-subtitle">¿Para quién es este curso?</h3>
+    <p class="body-text">Para cualquier persona, no hace falta experiencia previa. Es un espacio de acompañamiento paso a paso.</p>
+
+    <h3 class="modal-subtitle">Inversión</h3>
+    <p class="body-text">$00.000 ARS mensuales · Medios de pago: transferencia o Mercado Pago (datos a confirmar).</p>
+
+    <a href="#contacto" class="btn-whatsapp" onclick="closeModal('modal-curso')">Reservar mi lugar</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
