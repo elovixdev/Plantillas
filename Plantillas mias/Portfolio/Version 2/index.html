@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joaquín — Estudio de desarrollo web</title>
+<meta name="description" content="Portfolio de Joaquín, desarrollador web freelance. Sitios a medida, con foco en diseño editorial y precisión técnica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <header class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="#inicio" class="wordmark">Joaquín</a>
+      <p class="wordmark-sub">Desarrollo &amp; diseño web</p>
+    </div>
+
+    <nav class="side-nav" id="sideNav">
+      <a href="#inicio" class="side-link" data-section="inicio"><span>01</span>Inicio</a>
+      <a href="#proyectos" class="side-link" data-section="proyectos"><span>02</span>Proyectos</a>
+      <a href="#sobre-mi" class="side-link" data-section="sobre-mi"><span>03</span>Sobre mí</a>
+      <a href="#contacto" class="side-link" data-section="contacto"><span>04</span>Contacto</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <p class="status"><span class="status-dot"></span>Disponible para nuevos proyectos</p>
+      <a href="mailto:tu-email@ejemplo.com" class="sidebar-email">tu-email@ejemplo.com</a>
+      <div class="sidebar-social">
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="sideNav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- CONTENT -->
+  <main class="content" id="main">
+
+    <section class="hero" id="inicio">
+      <svg class="hero-lines" id="heroLines" viewBox="0 0 600 600" aria-hidden="true">
+        <circle cx="300" cy="300" r="180" />
+        <circle cx="300" cy="300" r="240" />
+        <circle cx="300" cy="300" r="120" />
+        <line x1="300" y1="0" x2="300" y2="600" />
+        <line x1="0" y1="300" x2="600" y2="300" />
+      </svg>
+
+      <p class="eyebrow" data-reveal>Portfolio — 2026</p>
+      <h1 data-reveal>Construyo sitios web con la<br>precisión de un estudio de diseño.</h1>
+      <p class="hero-sub" data-reveal>
+        Desarrollo páginas a medida — prolijas, rápidas y con identidad
+        propia — para marcas y proyectos que necesitan verse tan bien
+        como funcionan.
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-ghost">Iniciar un proyecto</a>
+      </div>
+    </section>
+
+    <section class="projects" id="proyectos">
+      <p class="eyebrow" data-reveal>02 — Proyectos</p>
+      <h2 data-reveal>Trabajo seleccionado</h2>
+
+      <div class="filters" data-reveal>
+        <button class="filter-tab active" data-filter="todos">Todos</button>
+        <button class="filter-tab" data-filter="landing">Landing</button>
+        <button class="filter-tab" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-tab" data-filter="portfolio">Portfolio</button>
+        <button class="filter-tab" data-filter="institucional">Institucional</button>
+      </div>
+
+      <div class="index-list" id="indexList" data-reveal>
+
+        <article class="index-row" data-cat="landing">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">01</span>
+            <span class="index-title">Estudio Marea</span>
+            <span class="index-meta">Landing page · 2025</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-1"></div>
+              <div class="index-details">
+                <p>Sitio de una página para un estudio de arquitectura, con foco en fotografía de obra y formulario de contacto directo.</p>
+                <div class="index-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="index-row" data-cat="ecommerce">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">02</span>
+            <span class="index-title">Nora Joyas</span>
+            <span class="index-meta">E-commerce · 2025</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-2"></div>
+              <div class="index-details">
+                <p>Tienda online de joyería artesanal, con catálogo filtrable, carrito y checkout simplificado.</p>
+                <div class="index-tags"><span>JS</span><span>CSS Grid</span><span>API</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="index-row" data-cat="portfolio">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">03</span>
+            <span class="index-title">Foto Bruma</span>
+            <span class="index-meta">Portfolio · 2024</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-3"></div>
+              <div class="index-details">
+                <p>Portfolio para una fotógrafa, con galería en grilla, lightbox y carga progresiva de imágenes.</p>
+                <div class="index-tags"><span>HTML</span><span>Lightbox</span><span>CSS</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="index-row" data-cat="institucional">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">04</span>
+            <span class="index-title">Café Lúpulo</span>
+            <span class="index-meta">Institucional · 2024</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-4"></div>
+              <div class="index-details">
+                <p>Sitio institucional para una cafetería de especialidad, con menú, ubicación y reserva de mesas.</p>
+                <div class="index-tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="index-row" data-cat="landing">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">05</span>
+            <span class="index-title">Lentes Sur</span>
+            <span class="index-meta">Landing page · 2026</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-5"></div>
+              <div class="index-details">
+                <p>Landing de lanzamiento de producto, con animaciones al scroll y contador de preventa.</p>
+                <div class="index-tags"><span>JS</span><span>Animación</span><span>CSS</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="index-row" data-cat="institucional">
+          <button class="index-head" aria-expanded="false">
+            <span class="index-num">06</span>
+            <span class="index-title">Taller Nudo</span>
+            <span class="index-meta">Institucional · 2025</span>
+            <span class="index-chevron" aria-hidden="true">＋</span>
+          </button>
+          <div class="index-panel">
+            <div class="index-panel-inner">
+              <div class="index-thumb thumb-6"></div>
+              <div class="index-details">
+                <p>Sitio para un taller de cerámica, con blog de novedades y calendario de próximos cursos.</p>
+                <div class="index-tags"><span>HTML</span><span>Blog</span><span>Responsive</span></div>
+                <a href="#" class="index-link">Ver sitio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="filter-empty" id="filterEmpty" hidden>Todavía no hay proyectos en esta categoría.</p>
+    </section>
+
+    <section class="about" id="sobre-mi">
+      <p class="eyebrow" data-reveal>03 — Sobre mí</p>
+      <div class="about-grid">
+        <blockquote class="about-quote" data-reveal>
+          “Diseño y programo cada sitio a mano, sin plantillas genéricas —
+          para que se sienta hecho a medida, no armado a partir de un molde.”
+        </blockquote>
+        <div class="about-side" data-reveal>
+          <p>
+            Soy Joaquín, desarrollador y diseñador web freelance. Trabajo de
+            cerca con cada cliente, desde la primera idea hasta el sitio
+            publicado, cuidando tanto la estética como el funcionamiento.
+          </p>
+          <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Git &amp; GitHub</li>
+            <li>Diseño responsive</li>
+            <li>UI / UX</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <p class="eyebrow" data-reveal>04 — Contacto</p>
+      <h2 data-reveal>¿Tenés un proyecto en mente?</h2>
+      <p class="contact-sub" data-reveal>Contame de qué se trata y lo hacemos realidad.</p>
+      <a href="mailto:tu-email@ejemplo.com" class="contact-email" data-reveal>tu-email@ejemplo.com</a>
+      <div class="social-links" data-reveal>
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Joaquín. Estudio de desarrollo web.</p>
+    </footer>
+
+  </main>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba" hidden>↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joaquín — Desarrollo web</title>
+<meta name="description" content="Portfolio de Joaquín, desarrollador web freelance. Sitios a medida, prolijos y con identidad propia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Public+Sans:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#inicio" class="logo">Joaquín<span class="logo-dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
+      <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
+      <a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="nav-link" data-section="contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="nav-cta">Escribime</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow" data-reveal>Desarrollo web · Diseño</p>
+        <h1 data-reveal>Sitios web con carácter <span class="fill-green">propio.</span></h1>
+        <p class="hero-sub" data-reveal>
+          Diseño y desarrollo páginas a medida — prolijas, rápidas y
+          pensadas para que tu marca se vea igual de bien en cualquier
+          pantalla.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-ghost">Escribime</a>
+        </div>
+      </div>
+
+      <div class="hero-badge-wrap" data-reveal>
+        <svg class="hero-badge" id="heroBadge" viewBox="0 0 240 240" aria-hidden="true">
+          <defs>
+            <path id="badgeCircle" d="M 120,120 m -95,0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0" />
+          </defs>
+          <circle cx="120" cy="120" r="118" class="badge-fill" />
+          <text class="badge-text">
+            <textPath href="#badgeCircle" startOffset="0%">
+              DESARROLLO WEB · DISEÑO A MEDIDA · HTML · CSS · JS ·
+            </textPath>
+          </text>
+          <circle cx="120" cy="120" r="46" class="badge-center" />
+        </svg>
+        <span class="badge-caption">100% hecho a mano</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="proyectos">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Portfolio</p>
+      <h2 data-reveal>Proyectos recientes</h2>
+      <p class="section-sub" data-reveal>Una selección de sitios que diseñé y desarrollé de punta a punta.</p>
+    </div>
+
+    <div class="filters" data-reveal>
+      <button class="filter-tab active" data-filter="todos">Todos</button>
+      <button class="filter-tab" data-filter="landing">Landing</button>
+      <button class="filter-tab" data-filter="ecommerce">E-commerce</button>
+      <button class="filter-tab" data-filter="portfolio">Portfolio</button>
+      <button class="filter-tab" data-filter="institucional">Institucional</button>
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+
+      <article class="card" data-cat="landing" data-reveal>
+        <div class="card-strip strip-green"><span>01</span><span>Landing page</span></div>
+        <div class="card-body">
+          <h3>Estudio Marea</h3>
+          <p>Sitio de una página para un estudio de arquitectura, con foco en fotografía de obra.</p>
+          <div class="card-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="ecommerce" data-reveal>
+        <div class="card-strip strip-clay"><span>02</span><span>E-commerce</span></div>
+        <div class="card-body">
+          <h3>Nora Joyas</h3>
+          <p>Tienda online de joyería artesanal con catálogo filtrable y checkout simplificado.</p>
+          <div class="card-stack"><span>JS</span><span>CSS Grid</span><span>API</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="portfolio" data-reveal>
+        <div class="card-strip strip-ink"><span>03</span><span>Portfolio</span></div>
+        <div class="card-body">
+          <h3>Foto Bruma</h3>
+          <p>Portfolio para una fotógrafa, con galería en grilla, lightbox y carga progresiva.</p>
+          <div class="card-stack"><span>HTML</span><span>Lightbox</span><span>CSS</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="institucional" data-reveal>
+        <div class="card-strip strip-clay"><span>04</span><span>Institucional</span></div>
+        <div class="card-body">
+          <h3>Café Lúpulo</h3>
+          <p>Sitio institucional para una cafetería de especialidad, con menú y reserva de mesas.</p>
+          <div class="card-stack"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="landing" data-reveal>
+        <div class="card-strip strip-green"><span>05</span><span>Landing page</span></div>
+        <div class="card-body">
+          <h3>Lentes Sur</h3>
+          <p>Landing de lanzamiento de producto con animaciones al scroll y contador de preventa.</p>
+          <div class="card-stack"><span>JS</span><span>Animación</span><span>CSS</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="institucional" data-reveal>
+        <div class="card-strip strip-ink"><span>06</span><span>Institucional</span></div>
+        <div class="card-body">
+          <h3>Taller Nudo</h3>
+          <p>Sitio para un taller de cerámica, con blog de novedades y calendario de cursos.</p>
+          <div class="card-stack"><span>HTML</span><span>Blog</span><span>Responsive</span></div>
+          <a href="#" class="card-link">Ver sitio <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+    </div>
+    <p class="filter-empty" id="filterEmpty" hidden>Todavía no hay proyectos en esta categoría.</p>
+  </section>
+
+  <section class="about" id="sobre-mi">
+    <div class="about-inner">
+      <div class="about-text" data-reveal>
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Diseño y programo cada sitio a mano, sin plantillas genéricas.</h2>
+        <p>
+          Soy Joaquín, desarrollador y diseñador web freelance. Trabajo de
+          cerca con cada cliente para que el sitio final se sienta hecho a
+          medida — con su propia identidad, prolijo y rápido.
+        </p>
+      </div>
+      <div class="about-skills" data-reveal>
+        <p class="skills-label">Herramientas y lenguajes</p>
+        <ul class="skills-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Git &amp; GitHub</li>
+          <li>Diseño responsive</li>
+          <li>UI / UX</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="contact-card" data-reveal>
+      <p class="eyebrow">Trabajemos juntos</p>
+      <h2>¿Empezamos?</h2>
+      <p class="contact-sub">Contame de tu proyecto y te respondo a la brevedad.</p>
+      <a href="mailto:tu-email@ejemplo.com" class="btn btn-cream btn-lg">Escribime un email</a>
+      <div class="social-links">
+        <a href="#">GitHub</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Joaquín. Hecho a mano con HTML, CSS y JavaScript.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba" hidden>↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

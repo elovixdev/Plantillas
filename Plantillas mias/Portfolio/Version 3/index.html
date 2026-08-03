@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joaquín — Desarrollo web</title>
+<meta name="description" content="Portfolio de Joaquín, desarrollador web freelance. Sitios rápidos, prolijos y a medida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="topbar">
+  <a href="#inicio" class="logo">Joaquín<span class="logo-dot">●</span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuOverlay">
+    Menú
+    <span class="menu-icon"><span></span><span></span></span>
+  </button>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+  <nav class="menu-links">
+    <a href="#inicio" data-menu-link>Inicio</a>
+    <a href="#proyectos" data-menu-link>Proyectos</a>
+    <a href="#sobre-mi" data-menu-link>Sobre mí</a>
+    <a href="#contacto" data-menu-link>Contacto</a>
+  </nav>
+  <div class="menu-footer">
+    <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a>
+    <div class="menu-social">
+      <a href="#">GitHub</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="hero" id="inicio">
+    <span class="blob blob-1" aria-hidden="true"></span>
+    <span class="blob blob-2" aria-hidden="true"></span>
+
+    <p class="badge" data-reveal><span class="badge-dot"></span>Disponible para nuevos proyectos</p>
+
+    <h1 data-reveal>
+      Páginas web<br>
+      que <span class="outline-text">se notan.</span>
+    </h1>
+
+    <p class="hero-sub" data-reveal>
+      Desarrollo sitios a medida — rápidos, prolijos y con una estética
+      propia — para marcas y proyectos que quieren destacar online.
+    </p>
+
+    <div class="hero-actions" data-reveal>
+      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+      <a href="#contacto" class="btn btn-ghost">Escribime</a>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Rápido</span><span>·</span><span>Prolijo</span><span>·</span>
+        <span>A medida</span><span>·</span><span>Responsive</span><span>·</span>
+        <span>SEO friendly</span><span>·</span>
+        <span>Rápido</span><span>·</span><span>Prolijo</span><span>·</span>
+        <span>A medida</span><span>·</span><span>Responsive</span><span>·</span>
+        <span>SEO friendly</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="proyectos">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Portfolio</p>
+      <h2 data-reveal>Proyectos recientes</h2>
+    </div>
+
+    <div class="filters" data-reveal>
+      <button class="filter-chip active" data-filter="todos">Todos</button>
+      <button class="filter-chip" data-filter="landing">Landing</button>
+      <button class="filter-chip" data-filter="ecommerce">E-commerce</button>
+      <button class="filter-chip" data-filter="portfolio">Portfolio</button>
+      <button class="filter-chip" data-filter="institucional">Institucional</button>
+    </div>
+
+    <div class="gallery-wrap" data-reveal>
+      <div class="gallery" id="gallery">
+
+        <article class="g-card" data-cat="landing">
+          <div class="g-thumb thumb-1">
+            <span class="shape shape-circle"></span>
+            <span class="shape shape-tri"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Estudio Marea</h3><span class="g-tag">Landing</span></div>
+            <p>Landing para un estudio de arquitectura, con foco en fotografía de obra.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="g-card" data-cat="ecommerce">
+          <div class="g-thumb thumb-2">
+            <span class="shape shape-square"></span>
+            <span class="shape shape-circle-sm"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Nora Joyas</h3><span class="g-tag">E-commerce</span></div>
+            <p>Tienda online de joyería artesanal con catálogo filtrable y checkout simple.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="g-card" data-cat="portfolio">
+          <div class="g-thumb thumb-3">
+            <span class="shape shape-tri shape-tri-2"></span>
+            <span class="shape shape-circle"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Foto Bruma</h3><span class="g-tag">Portfolio</span></div>
+            <p>Portfolio para una fotógrafa, con galería en grilla y lightbox.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="g-card" data-cat="institucional">
+          <div class="g-thumb thumb-4">
+            <span class="shape shape-square shape-square-2"></span>
+            <span class="shape shape-circle-sm"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Café Lúpulo</h3><span class="g-tag">Institucional</span></div>
+            <p>Sitio institucional para una cafetería de especialidad, con reserva de mesas.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="g-card" data-cat="landing">
+          <div class="g-thumb thumb-5">
+            <span class="shape shape-circle"></span>
+            <span class="shape shape-tri"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Lentes Sur</h3><span class="g-tag">Landing</span></div>
+            <p>Landing de lanzamiento de producto con animaciones al scroll.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="g-card" data-cat="institucional">
+          <div class="g-thumb thumb-6">
+            <span class="shape shape-square"></span>
+            <span class="shape shape-circle-sm"></span>
+          </div>
+          <div class="g-body">
+            <div class="g-top"><h3>Taller Nudo</h3><span class="g-tag">Institucional</span></div>
+            <p>Sitio para un taller de cerámica con blog de novedades y cursos.</p>
+            <a href="#" class="g-link">Ver sitio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="gallery-controls">
+      <div class="gallery-progress"><span id="galleryProgressBar"></span></div>
+      <div class="gallery-arrows">
+        <button id="galleryPrev" aria-label="Anterior">←</button>
+        <button id="galleryNext" aria-label="Siguiente">→</button>
+      </div>
+    </div>
+    <p class="filter-empty" id="filterEmpty" hidden>Todavía no hay proyectos en esta categoría.</p>
+  </section>
+
+  <section class="about" id="sobre-mi">
+    <div class="about-grid">
+      <div class="about-quote" data-reveal>
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Cada sitio, <span class="outline-text">hecho a mano.</span></h2>
+      </div>
+      <div class="about-text" data-reveal>
+        <p>
+          Soy Joaquín, desarrollador y diseñador web freelance. Programo cada
+          página desde cero con HTML, CSS y JavaScript, sin plantillas
+          genéricas, para que el resultado final tenga identidad propia y
+          funcione tan bien como se ve.
+        </p>
+      </div>
+    </div>
+
+    <div class="marquee marquee-alt" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML5</span><span>·</span><span>CSS3</span><span>·</span>
+        <span>JavaScript</span><span>·</span><span>Git &amp; GitHub</span><span>·</span>
+        <span>Responsive</span><span>·</span><span>UI / UX</span><span>·</span>
+        <span>HTML5</span><span>·</span><span>CSS3</span><span>·</span>
+        <span>JavaScript</span><span>·</span><span>Git &amp; GitHub</span><span>·</span>
+        <span>Responsive</span><span>·</span><span>UI / UX</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <p class="eyebrow" data-reveal>Contacto</p>
+    <h2 data-reveal>Empecemos.</h2>
+    <p class="contact-sub" data-reveal>Contame de tu proyecto y te respondo a la brevedad.</p>
+    <a href="mailto:tu-email@ejemplo.com" class="btn btn-dark btn-lg" data-reveal>Escribime un email</a>
+    <div class="social-links" data-reveal>
+      <a href="#">GitHub</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Joaquín. Hecho a mano con HTML, CSS y JavaScript.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba" hidden>↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

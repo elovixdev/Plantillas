@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joaquín Viani — Desarrollo Web</title>
+<meta name="description" content="Joaquín Viani, desarrollador web. Sitios a medida con HTML, CSS y JavaScript, pensados para vender.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #1b1713;
+    --bg-2: #221d17;
+    --card: #29241d;
+    --card-hover: #2f291f;
+    --border: #3c3327;
+    --text: #f2ead9;
+    --text-dim: #b8ab93;
+    --text-faint: #7d7161;
+    --amber: #e0a458;
+    --amber-soft: rgba(224,164,88,0.14);
+    --sage: #8ba883;
+    --sage-soft: rgba(139,168,131,0.14);
+    --mono-bg: #14110d;
+    --radius: 14px;
+    --maxw: 1120px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection{ background: var(--amber-soft); color: var(--text); }
+
+  a{ color: inherit; text-decoration: none; }
+
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.12;
+  }
+
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width: 18px; height: 1px;
+    background: var(--amber);
+    display:inline-block;
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position: sticky; top:0; z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(27,23,19,0.82);
+    border-bottom: 1px solid var(--border);
+  }
+  nav{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 18px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    display:flex; align-items:baseline; gap: 8px;
+  }
+  .logo span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-faint);
+    font-weight:400;
+  }
+  .nav-links{
+    display:flex; gap: 34px; align-items:center;
+    font-size: 0.92rem;
+    color: var(--text-dim);
+  }
+  .nav-links a{ transition: color .2s ease; }
+  .nav-links a:hover{ color: var(--text); }
+  .nav-cta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    padding: 9px 18px;
+    border: 1px solid var(--amber);
+    border-radius: 100px;
+    color: var(--amber) !important;
+    transition: all .2s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{ background: var(--amber); color: var(--bg) !important; }
+
+  @media (max-width: 780px){
+    .nav-links{ display:none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 88px 0 70px;
+    position: relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size: clamp(2.3rem, 4.4vw, 3.4rem);
+    margin: 18px 0 22px;
+  }
+  .hero h1 em{
+    font-style: italic;
+    color: var(--amber);
+  }
+  .hero p.lead{
+    font-size: 1.08rem;
+    color: var(--text-dim);
+    max-width: 46ch;
+    margin-bottom: 34px;
+  }
+  .hero-ctas{ display:flex; gap: 16px; flex-wrap:wrap; }
+
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    padding: 13px 24px;
+    border-radius: 100px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary{ background: var(--amber); color: #1b1713; font-weight:500; }
+  .btn-primary:hover{ background:#eab167; transform: translateY(-1px); }
+  .btn-ghost{ border-color: var(--border); color: var(--text-dim); }
+  .btn-ghost:hover{ border-color: var(--text-dim); color: var(--text); }
+
+  /* ---- signature: editor + browser mock ---- */
+  .stage{
+    position: relative;
+    display:grid;
+    gap: 18px;
+  }
+  .mockwin{
+    background: var(--mono-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px -20px rgba(0,0,0,0.6);
+  }
+  .mockwin-bar{
+    display:flex; align-items:center; gap: 8px;
+    padding: 10px 14px;
+    background: #1a1611;
+    border-bottom: 1px solid var(--border);
+  }
+  .dot{ width:9px; height:9px; border-radius:50%; }
+  .dot.r{ background:#e0847a; } .dot.y{ background:#e0c05a; } .dot.g{ background:#8fc08a; }
+  .mockwin-tab{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-left: 8px;
+  }
+  .editor-body{
+    padding: 18px 20px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.85;
+    color: #cbb98f;
+    min-height: 168px;
+  }
+  .editor-body .ln{ color: var(--text-faint); display:inline-block; width:18px; }
+  .tok-tag{ color:#e0a458; }
+  .tok-attr{ color:#8ba883; }
+  .tok-str{ color:#d99a7c; }
+  .typeline{
+    overflow:hidden;
+    white-space:nowrap;
+    width: 0;
+    animation: reveal 0.6s steps(30,end) forwards;
+  }
+  .typeline:nth-child(1){ animation-delay: .1s; }
+  .typeline:nth-child(2){ animation-delay: .5s; }
+  .typeline:nth-child(3){ animation-delay: .9s; }
+  .typeline:nth-child(4){ animation-delay: 1.3s; }
+  .typeline:nth-child(5){ animation-delay: 1.7s; }
+  .typeline:nth-child(6){ animation-delay: 2.1s; }
+  @keyframes reveal{ to{ width: 100%; } }
+
+  .browser-bar{
+    display:flex; align-items:center; gap:10px;
+    padding: 10px 14px;
+    background: #1a1611;
+    border-bottom: 1px solid var(--border);
+  }
+  .url-pill{
+    flex:1;
+    background: #241f18;
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-faint);
+  }
+  .preview{
+    padding: 26px 22px;
+    background: linear-gradient(160deg, #211c15, #1a1611);
+    min-height: 168px;
+    opacity: 0;
+    animation: fadein .7s ease forwards;
+    animation-delay: 2.4s;
+  }
+  @keyframes fadein{ to{ opacity:1; } }
+  .preview .p-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform:uppercase;
+    color: var(--sage);
+    margin-bottom: 8px;
+  }
+  .preview h4{
+    font-family:'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .preview p{ font-size: 0.82rem; color: var(--text-dim); margin-bottom: 14px; max-width: 34ch; }
+  .preview .p-btn{
+    display:inline-block;
+    background: var(--amber);
+    color: #1b1713;
+    font-size: 0.72rem;
+    font-family:'IBM Plex Mono', monospace;
+    padding: 7px 16px;
+    border-radius: 100px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .typeline{ width: 100% !important; animation: none !important; }
+    .preview{ opacity:1 !important; animation:none !important; }
+  }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{ padding: 84px 0; border-top: 1px solid var(--border); }
+  .section-head{ margin-bottom: 46px; max-width: 640px; }
+  .section-head h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-top:14px; }
+
+  /* ---------- SOBRE MI ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+    align-items:start;
+  }
+  .about-grid p{ color: var(--text-dim); margin-bottom: 18px; font-size: 1.02rem; }
+  .about-grid p:last-child{ margin-bottom:0; }
+  .signature-line{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+  }
+  .stack-tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 24px; }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.74rem;
+    padding: 6px 13px;
+    border-radius: 100px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  @media (max-width: 900px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- SERVICIOS ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .service-card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    transition: all .25s ease;
+  }
+  .service-card:hover{ background: var(--card-hover); border-color: #4a4030; transform: translateY(-3px); }
+  .service-card .icon{
+    width: 38px; height:38px;
+    border-radius: 9px;
+    background: var(--amber-soft);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom: 18px;
+  }
+  .service-card h3{ font-size: 1.08rem; margin-bottom: 10px; font-weight:500; }
+  .service-card p{ color: var(--text-dim); font-size: 0.92rem; }
+  @media (max-width: 900px){ .services-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px){ .services-grid{ grid-template-columns: 1fr; } }
+
+  /* ---------- PROYECTOS ---------- */
+  .projects-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .project-card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow:hidden;
+    transition: all .25s ease;
+  }
+  .project-card:hover{ border-color:#4a4030; }
+  .project-thumb{
+    height: 150px;
+    background: linear-gradient(135deg, #241f18, #17130f);
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .project-thumb .mini-browser{
+    width: 82%; background: var(--mono-bg); border-radius:6px; border:1px solid var(--border);
+    overflow:hidden;
+  }
+  .project-thumb .mini-bar{ display:flex; gap:5px; padding:6px 9px; background:#1a1611; }
+  .project-thumb .mini-dot{ width:6px; height:6px; border-radius:50%; background:#4a4030; }
+  .project-thumb .mini-body{ padding: 14px 12px; }
+  .project-thumb .mini-line{ height:6px; border-radius:3px; background:#332b20; margin-bottom:7px; }
+  .project-body{ padding: 20px 22px 22px; }
+  .project-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color: var(--sage);
+    margin-bottom: 8px;
+    display:block;
+  }
+  .project-body h3{ font-size: 1.05rem; margin-bottom: 8px; font-weight:500; }
+  .project-body p{ color: var(--text-dim); font-size: 0.88rem; margin-bottom: 14px; }
+  .project-link{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--amber);
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  @media (max-width: 780px){ .projects-grid{ grid-template-columns: 1fr; } }
+
+  .projects-note{
+    margin-top: 28px;
+    font-size: 0.88rem;
+    color: var(--text-faint);
+    border-left: 2px solid var(--border);
+    padding-left: 16px;
+  }
+
+  /* ---------- PROCESO ---------- */
+  .process-list{ display:flex; flex-direction:column; }
+  .process-item{
+    display:grid;
+    grid-template-columns: 70px 1fr;
+    gap: 22px;
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+  }
+  .process-item:last-child{ border-bottom: 1px solid var(--border); }
+  .process-num{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--text-faint);
+  }
+  .process-item h3{ font-size: 1.1rem; margin-bottom: 6px; font-weight:500; }
+  .process-item p{ color: var(--text-dim); font-size: 0.92rem; max-width: 56ch; }
+
+  /* ---------- CONTACTO ---------- */
+  .contact-section{ border-bottom: 1px solid var(--border); }
+  .contact-box{
+    background: linear-gradient(150deg, var(--card), var(--bg-2));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 56px;
+    text-align:center;
+  }
+  .contact-box h2{ font-size: clamp(1.7rem, 3.4vw, 2.5rem); margin-bottom: 16px; }
+  .contact-box p{ color: var(--text-dim); max-width: 50ch; margin: 0 auto 34px; }
+  .contact-links{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  @media (max-width: 600px){ .contact-box{ padding: 38px 22px; } }
+
+  footer{
+    padding: 34px 0 42px;
+    text-align:center;
+    color: var(--text-faint);
+    font-size: 0.82rem;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  footer a{ color: var(--text-dim); }
+  footer a:hover{ color: var(--amber); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Viani<span>/ dev</span></div>
+    <div class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto" class="nav-cta">Contactame</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="border-top:none; padding-top: 88px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Desarrollo web · HTML / CSS / JavaScript</span>
+        <h1>Convierto tu idea en una <em>página que vende</em>, línea por línea.</h1>
+        <p class="lead">Soy Joaquín Viani. Diseño y desarrollo sitios a medida —landings, páginas de venta, sitios institucionales— pensados para que la persona que llega, se quede y actúe.</p>
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn btn-primary">Contame tu proyecto →</a>
+          <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="mockwin">
+          <div class="mockwin-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="mockwin-tab">index.html</span>
+          </div>
+          <div class="editor-body">
+            <div class="typeline"><span class="ln">1</span> <span class="tok-tag">&lt;section</span> <span class="tok-attr">class</span>=<span class="tok-str">"venta"</span><span class="tok-tag">&gt;</span></div>
+            <div class="typeline"><span class="ln">2</span> &nbsp;&nbsp;<span class="tok-tag">&lt;h1&gt;</span>Tu curso, listo<span class="tok-tag">&lt;/h1&gt;</span></div>
+            <div class="typeline"><span class="ln">3</span> &nbsp;&nbsp;<span class="tok-tag">&lt;p&gt;</span>para vender hoy<span class="tok-tag">&lt;/p&gt;</span></div>
+            <div class="typeline"><span class="ln">4</span> &nbsp;&nbsp;<span class="tok-tag">&lt;button&gt;</span>Inscribirme<span class="tok-tag">&lt;/button&gt;</span></div>
+            <div class="typeline"><span class="ln">5</span> <span class="tok-tag">&lt;/section&gt;</span></div>
+          </div>
+        </div>
+
+        <div class="mockwin">
+          <div class="browser-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <div class="url-pill">tucurso.com</div>
+          </div>
+          <div class="preview">
+            <div class="p-eyebrow">Curso online</div>
+            <h4>Tu curso, listo para vender hoy.</h4>
+            <p>Inscripciones abiertas, pago integrado, todo en una página.</p>
+            <span class="p-btn">Inscribirme</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE MI ============ -->
+  <section id="sobre-mi">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Carta de presentación</span>
+        <h2>Quién te va a estar escribiendo el código</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Trabajo con HTML, CSS y JavaScript puro: sin plantillas genéricas, sin builders que atan tu sitio a una plataforma. Cada página la pienso y la escribo para el negocio que la necesita.</p>
+          <p>Uso Git y GitHub para versionar cada proyecto, así que si mañana necesitás un cambio, hay un historial prolijo de todo lo que se hizo —y quién lo hizo. Trabajo desde VS Code, con foco en código limpio y sitios livianos que cargan rápido.</p>
+          <p class="signature-line">"No vendo plantillas. Escribo la página que tu negocio necesita, para que quien la visite haga lo que vos necesitás que haga."</p>
+        </div>
+        <div>
+          <p>Si vendés cursos, productos o servicios y necesitás una página que explique bien la propuesta y lleve a la acción —comprar, inscribirse, escribirte— es exactamente el tipo de proyecto en el que me metí más de una vez.</p>
+          <p>Trabajo freelance, coordino todo por mensaje o videollamada, y entrego el sitio listo para publicarse, con el código disponible en un repositorio propio.</p>
+          <div class="stack-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Diseño responsive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Qué puedo hacer por vos</span>
+        <h2>Servicios</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0a458" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </div>
+          <h3>Landing pages</h3>
+          <p>Una sola página, un solo objetivo: que la visita se convierta en cliente. Ideal para lanzamientos, cursos o promociones puntuales.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0a458" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          </div>
+          <h3>Páginas de venta</h3>
+          <p>Sitios pensados para vender cursos, productos digitales o servicios: estructura clara, textos que persuaden, botón de acción visible.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0a458" stroke-width="1.8"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <h3>Sitios institucionales</h3>
+          <p>La carta de presentación digital de tu negocio: quiénes son, qué hacen, cómo contactarlos. Simple, prolijo y fácil de mantener.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8ba883" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg>
+          </div>
+          <h3>Mantenimiento y cambios</h3>
+          <p>Ya tenés un sitio pero necesitás actualizarlo, corregirlo o sumarle algo nuevo. Trabajo sobre lo existente sin romper lo que ya funciona.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8ba883" stroke-width="1.8"><path d="M12 20l9-16H3z"/></svg>
+          </div>
+          <h3>Optimización y velocidad</h3>
+          <p>Sitios livianos, sin dependencias innecesarias, que cargan rápido tanto en celular como en desktop.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8ba883" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3>Próximamente: apps</h3>
+          <p>Estoy sumando desarrollo de aplicaciones a mis servicios. Si tu proyecto va por ese lado, hablemos igual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <section id="proyectos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Trabajo hecho</span>
+        <h2>Algunos proyectos</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <div class="mini-browser">
+              <div class="mini-bar"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div>
+              <div class="mini-body">
+                <div class="mini-line" style="width:60%"></div>
+                <div class="mini-line" style="width:85%"></div>
+                <div class="mini-line" style="width:40%; background:#e0a458;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Demo · Página de venta</span>
+            <h3>Landing para curso online</h3>
+            <p>Estructura de una página de ventas: propuesta, beneficios, testimonios y botón de inscripción. Construida con HTML, CSS y JS puro.</p>
+            <a href="#" class="project-link">Ver en GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <div class="mini-browser">
+              <div class="mini-bar"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div>
+              <div class="mini-body">
+                <div class="mini-line" style="width:50%"></div>
+                <div class="mini-line" style="width:70%"></div>
+                <div class="mini-line" style="width:30%; background:#8ba883;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Demo · Sitio institucional</span>
+            <h3>Presentación de negocio local</h3>
+            <p>Sitio de una sola página para un emprendimiento: quiénes son, servicios y contacto directo por WhatsApp.</p>
+            <a href="#" class="project-link">Ver en GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+      <p class="projects-note">Este portfolio está recién empezando — a medida que sume clientes, esta sección se va a ir llenando con casos reales. Los repos van a estar en <strong>github.com/[usuario-a-definir]</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section id="proceso">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>De la idea a la página publicada</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-num">01</span>
+          <div>
+            <h3>Charlamos sobre tu proyecto</h3>
+            <p>Me contás qué necesitás vender o mostrar, quién es tu cliente y qué acción querés que tome al entrar al sitio.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <span class="process-num">02</span>
+          <div>
+            <h3>Te propongo una estructura</h3>
+            <p>Defino las secciones, el recorrido y el estilo visual antes de escribir una sola línea de código, así ambos sabemos hacia dónde vamos.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <span class="process-num">03</span>
+          <div>
+            <h3>Desarrollo el sitio</h3>
+            <p>Escribo el HTML, CSS y JavaScript, versionando cada avance en GitHub. Te muestro avances parciales para ajustar sobre la marcha.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <span class="process-num">04</span>
+          <div>
+            <h3>Entrega y acompañamiento</h3>
+            <p>Publicamos el sitio y te dejo el código organizado. Si necesitás cambios más adelante, ya conozco tu proyecto de memoria.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="contact-section">
+    <div class="wrap">
+      <div class="contact-box">
+        <span class="eyebrow" style="margin-bottom:16px;">¿Hablamos?</span>
+        <h2>Contame qué página necesitás y la armamos juntos.</h2>
+        <p>Respondo rápido y sin vueltas. Elegí el medio que más te guste.</p>
+        <div class="contact-links">
+          <a href="mailto:tu-email@ejemplo.com" class="btn btn-primary">Escribime un email</a>
+          <a href="https://wa.me/54900000000" class="btn btn-ghost">WhatsApp</a>
+          <a href="https://instagram.com/tu-usuario" class="btn btn-ghost">Instagram</a>
+          <a href="https://github.com/tu-usuario" class="btn btn-ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Joaquín Viani — Desarrollo Web · Hecho con HTML, CSS y JavaScript · <a href="https://github.com/tu-usuario">GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
